@@ -1,12 +1,16 @@
-%p#notice= notice
+%h1 Show blog
 
-%p
-  %b Title:
-  = @blog.title
-%p
-  %b Description:
-  = @blog.description
+.row
+  %p.col-3
+    %b Title
+  %p.col
+    = @blog.title
+.row
+  %p.col-3
+    %b Description
+  %p.col
+    = @blog.description
 
-= link_to 'Edit', edit_blog_path(@blog)
+= link_to 'Edit', edit_blog_path(@blog), class: "btn btn-link"
 \|
-= link_to 'Back', blogs_path
+= link_to 'Back', blogs_path, class: "btn btn-link"
